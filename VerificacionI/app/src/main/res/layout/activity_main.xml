@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Fondo con degradado -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_bg">
+    </LinearLayout>
+
+    <!-- Icono de usuario en el centro -->
+    <ImageView
+        android:id="@+id/userIconImageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="150dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_user"
+        android:contentDescription="@string/user_icon_description"
+        android:visibility="visible" />
+
+    <!-- Texto de indicación -->
+    <TextView
+        android:id="@+id/textInstruction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/userIconImageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="Ingresa El Codigo De Verificacion"
+        android:textSize="18sp"
+        android:textColor="@android:color/black" />
+
+    <!-- Cuadros para ingresar código -->
+    <LinearLayout
+        android:id="@+id/codeInputLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textInstruction"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/rectangle_code_input_background_with_red_border"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textAlignment="center" />
+
+        <EditText
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/rectangle_code_input_background_with_red_border"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textAlignment="center" />
+
+        <EditText
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/rectangle_code_input_background_with_red_border"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textAlignment="center" />
+
+        <EditText
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/rectangle_code_input_background_with_red_border"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+    <!-- Texto de código incorrecto -->
+    <TextView
+        android:id="@+id/textError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/codeInputLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Codigo incorrecto, verifique el codigo nuevamente"
+        android:textSize="16sp"
+        android:textColor="@android:color/holo_red_dark"
+        android:visibility="visible" />
+
+    <!-- Botones en la parte inferior -->
+    <LinearLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnValidar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:paddingHorizontal="20dp"
+            android:background="@drawable/button_ripple_effect"
+            android:backgroundTint="#B0B0B0"
+            android:text="Validar"
+            android:textColor="@color/black"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/btnNuevoCodigo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="20dp"
+            android:background="@drawable/button_ripple_effect"
+            android:backgroundTint="#B0B0B0"
+            android:text="Nuevo codigo"
+            android:textColor="@color/black"
+            android:enabled="true"
+            android:visibility="visible" />
+    </LinearLayout>
+
+</RelativeLayout>
